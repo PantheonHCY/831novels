@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>上善若🌿选集</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">上善若🌿选集</h1>
+    <p class="site-intro">目前已收录作品 <b>365</b> 篇，其中刘增艳文学
+      <b>223</b> 篇，刘增艳x袁雨桢小甜文 <b>102</b> 篇，相声
+      <b>36</b> 段</p>
+  </div>
+</header>
+<main class="container">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="side-group">
+        <div class="side-title">年份</div>
+        <div class="side-btns" id="year-btns"></div>
+      </div>
+      <div class="side-group">
+        <div class="side-title">月份</div>
+        <div class="side-btns two-col" id="month-btns"></div>
+      </div>
+      <div class="side-group">
+        <div class="side-title">常见成员</div>
+        <div class="side-btns two-col" id="popular-btns"></div>
+      </div>
+    </aside>
+    <section class="content">
+      <section class="filters">
+        <label class="filter-item">每页
+          <select id="size-select">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="0">不分页</option>
+          </select>
+        </label>
+        <label class="filter-item">标题包含
+          <input type="text" id="title-input" placeholder="如：相声">
+        </label>
+        <span id="tag-filter-wrap" class="tag-filter hidden">
+          标签 <span id="active-tags"></span>
+          <button type="button" id="clear-tags" class="chip-clear" title="清除全部标签筛选">×</button>
+        </span>
+      </section>
+      <section class="quick-links">
+        <span class="quick-label">快捷操作</span>
+        <button type="button" class="quick-btn" id="quick-crosstalk"
+                title="标题包含「相声」，再点一次取消">相声</button>
+        <button type="button" class="quick-btn" id="quick-duo"
+                title="同时筛选「刘增艳」和「袁雨桢」，再点一次取消">刘增艳 ❤️ 袁雨桢</button>
+        <button type="button" class="quick-btn" id="quick-duo3"
+                title="同时筛选「徐钰涵」和「黄逸」，再点一次取消">徐钰涵 ❤️ 黄逸</button>
+        <button type="button" class="quick-btn" id="quick-duo2"
+                title="同时筛选「马欣宇」和「郑照暄」，再点一次取消">马欣宇 ❤️ 郑照暄</button>
+        <button type="button" class="quick-btn" id="quick-random"
+                title="随机打开一篇文章">🎲 随便看看</button>
+      </section>
+      <div id="result-count" class="result-count"></div>
+      <div id="article-list" class="article-list"></div>
+      <div id="empty-tip" class="empty-tip hidden">没有符合条件的文章</div>
+      <nav id="pager" class="pager hidden">
+        <button type="button" id="prev-page">‹ 上一页</button>
+        <span id="page-info"></span>
+        <button type="button" id="next-page">下一页 ›</button>
+      </nav>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-line">作者：@上善若🌿，整理收录：@PantheonHCY💛</div>
+  <div class="footer-sub">上善若🌿选集 · 由 Python 构建</div>
+</footer>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
